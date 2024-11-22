@@ -1,0 +1,312 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto Condensed", sans-serif;
+}
+
+body{
+    background-color:#FBCEB1;
+    color: rgb(94, 91, 91);
+}
+
+.inp {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    margin-top: 50px;
+    justify-content: center;
+    position: relative;
+    background-color:transparent;
+
+    >input {
+        width: 30%;
+        height: 100%;
+        border: none;
+        outline: none;
+        box-shadow: 1px 1px 20px #FFA07A;
+        border-radius: 40px;
+        padding-left: 15px;
+        font-size: 18px;
+        &:focus{
+            box-shadow: 1px 1px 25px #f87b4a;
+        }
+       
+        &::placeholder {
+            padding-left: 10px;
+            font-size: 16px;
+        }
+    }
+
+    >i {
+        position: absolute;
+        top: 50%;
+        right: 36%;
+        transform: translate(-50%, -50%);
+        cursor: pointer;
+    }
+}
+
+main {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 30px;
+
+    >article {
+        width: 500px;
+        height: 500px;
+        border-radius: 15px;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 15px;
+        justify-content: center;
+        box-shadow: 1px 1px 20px #FFA07A;
+        background-color: #ffffff4e;
+
+       >figure{
+        width: 300px;
+        height: 300px;
+        overflow: hidden;
+        border-radius: 20px;
+        >img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            padding-top: 15px;
+            border-radius: 20px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: 1s;
+            scale: 1;
+
+            &:hover {
+                scale: 1.2;
+            }
+        }
+       }
+
+        >h2 {
+            width: 100%;
+            padding-left: 15px;
+            text-transform: capitalize;
+        }
+
+        >h5 {
+            width: 100%;
+            padding-left: 15px;
+            text-transform: capitalize;
+            font-size: 18px;
+        }
+
+        >span {
+            width: 100%;
+            padding-left: 15px;
+            color: red;
+            font-size: 20px;
+        }
+
+        >button {
+            width: 110px;
+            height: 35px;
+            border: none;
+            outline: none;
+            border-radius: 15px;
+            cursor: pointer;
+            background-color: #fff;
+            box-shadow: 1px 1px 20px #FFA07A;
+            background-color: #FBCEB1;
+            padding: 10px;
+            font-size: 16px;
+            transition: .4s;
+            color: rgb(94, 91, 91);
+            &:hover{
+                box-shadow: 1px 1px 25px #ee7c4f; 
+            }
+        }
+
+    }
+}
+
+.popup {
+    width: 100%;
+    height: 100vh;
+    background-color:#FBCEB1;
+    display: flex;
+    flex-wrap: wrap;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    transition: 1s;
+    padding: 20px;
+    justify-content: center;
+
+    >* {
+        /* border: 1px solid red; */
+        font-size: 25px;
+        color: rgba(73, 69, 69, 0.998);
+
+    }
+
+    >i {
+        width: 100%;
+        cursor: pointer;
+        font-size: 40px;
+        color: #FFA07A;
+        height: fit-content;
+       
+    }
+
+    >img {
+        width: 300px;
+        height: 300px;
+        object-fit: cover;
+        margin-top: -100px;
+        border-radius: 8px;
+        box-shadow: 2px 2px 30px #FFA07A;
+    }
+
+    >h2 {
+        width: 100%;
+        text-align: center;
+        margin-top: -30px;
+    }
+
+    >h5 {
+        width: 100%;
+        text-align: center;
+        margin-top: -30px;
+    }
+
+    >p {
+        width: 50%;
+        text-align: center;
+        margin-top: -30px;
+    }
+
+    >span {
+        width: 100%;
+        text-align: center;
+        margin-top: -30px;
+        &:nth-of-type(2){
+            color: red;
+        }
+        &:nth-of-type(1){
+            color: green;
+        }
+    }
+    >button{
+        width: 250px;
+        height: 35px;
+        border: none;
+        outline: none;
+        border-radius: 15px;
+        cursor: pointer;
+        background-color: #fff;
+        box-shadow: 1px 1px 20px #FFA07A;
+        background-color: #FBCEB1;
+        padding: 10px;
+        font-size: 18px;
+        transition: .4s;
+        color: green;
+        &:hover{
+            box-shadow: 1px 1px 25px #ee7c4f; 
+        }
+    }
+}
+.me {
+    width: 150px;
+    height: 150px;
+    position: fixed;
+    bottom: 40px;
+    right: 5px;
+    z-index: 1001;
+    /* border: 1px solid red; */
+
+    >div {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: red;
+
+
+        &:first-of-type {
+            border-radius: 49% 51% 46% 54% / 74% 77% 23% 26%;
+            background-color: #424965;
+            animation: anime2 infinite alternate 2s;
+
+        }
+
+        &:last-of-type {
+            background-image: url(../img/IMG_20240503_145931_527.jpg);
+            background-size: cover;
+            border-radius: 49% 51% 46% 54% / 37% 31% 69% 63%;
+            animation: anime1 infinite alternate 2s;
+
+        }
+    }
+
+    &:hover {
+        >a {
+            left: -30px;
+            opacity: 1;
+
+            &:nth-of-type(2) {
+                left: -70px;
+            }
+
+            &:nth-of-type(3) {
+                left: -70px;
+            }
+
+            &:nth-of-type(4) {
+                left: -30px;
+            }
+        }
+    }
+
+    >a {
+        position: absolute;
+        left: 30px;
+        text-decoration: none;
+        font-size: 30px;
+        transition: 1s;
+        color: black;
+        opacity: 0;
+
+        &:first-of-type {
+            top: 0;
+
+        }
+
+        &:nth-of-type(2) {
+            top: 40px;
+        }
+
+        &:nth-of-type(3) {
+            top: 90px;
+        }
+
+        &:nth-of-type(4) {
+            top: 140px;
+        }
+
+    }
+
+
+}
+
+@keyframes anime1 {
+    to {
+        border-radius: 49% 51% 48% 52% / 46% 46% 54% 54%;
+    }
+}
+
+@keyframes anime2 {
+    to {
+        border-radius: 70% 30% 44% 56% / 46% 34% 66% 54%;
+    }
+}
